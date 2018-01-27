@@ -6,6 +6,8 @@
 
 第一版正在审核中……
 
+![ezTodos Preview](./assets/ezTodos.jpg)
+
 ## 功能
 
 - 添加一项新任务
