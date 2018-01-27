@@ -1,0 +1,24 @@
+
+  <view class="header">
+    <label class="headerInner" for="newtodo">
+      <image class="plus" src="../../assets/plus.png"/> 
+      <input name="newtodo" id="newtodo" class="new-todo" value="{{ input }}" placeholder="添加任务..." auto-focus bindinput="inputChangeHandle" bindconfirm="addTodoHandle"/>
+      <icon wx:if="{{ input !== '' }}" class="remove" type="clear" color="#ccc" catchtap="removeInputHandle"/> 
+    </label>
+  </view>
+  <view class="container">
+  <block wx:if="{{ todos.length }}">
+    <view class="todos">
+      <!-- List items should get the class `completed` when marked as completed -->
+      <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
+        <!-- completed: success, todo: circle -->
+        <icon class="checkbox" color="#6c6" type="{{ item.completed ? 'success' : 'circle' }}"/>
+        <text class="name">{{ item.name }}</text>
+        <icon class="remove" type="clear" color="#ccc" catchtap="removeTodoHandle" data-index="{{ index }}"/>
+      </view>
+    </view>
+    <view class="footer">
+       <text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearCompletedHandle">清空已完成的任务</text> 
+    </view>
+  </block>
+</view>
