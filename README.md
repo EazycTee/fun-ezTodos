@@ -4,6 +4,8 @@
 
 这是一个待办清单（微信小程序），使用微信本地储存数据。
 
+![ezTodos Preview](http://oww4nskgw.bkt.clouddn.com/20180127.fun-ezTodos.jpg!pv)
+
 ## 功能
 
 - 添加一项新任务
